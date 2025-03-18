@@ -105,6 +105,14 @@
             color: rgb(71, 89, 62);
             font-weight: 500;
             transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav a:not(:last-child)::after {
+            content: "|";
+            position: absolute;
+            right: -15px;
+            color: rgb(71, 89, 62, 0.7);
         }
 
         .nav a:hover {
@@ -208,15 +216,32 @@
 
             .content {
                 padding: 15px;
+                width: 100%;
+                max-width: 100%;
             }
 
             .wedding-title {
                 font-size: 42px;
             }
 
+            .nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 10px 5px;
+                gap: 8px;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
             .nav a {
-                margin: 0 8px;
+                margin: 2px;
                 font-size: 16px;
+                white-space: nowrap;
+            }
+
+            .nav a:not(:last-child)::after {
+                display: none;
             }
 
             .language-toggle {
@@ -366,18 +391,18 @@
         <div class="divider"></div>
 
         <div class="nav lang-en">
-            <a href="#story">Our Story</a> |
-            <a href="#details">Details</a> |
-            <a href="#travel">Travel</a> |
-            <a href="#rsvp">RSVP</a> |
+            <a href="#story">Our Story</a>
+            <a href="#details">Details</a>
+            <a href="#travel">Travel</a>
+            <a href="#rsvp">RSVP</a>
             <a href="#registry">Registry</a>
         </div>
 
         <div class="nav lang-es">
-            <a href="#story">Nuestra Historia</a> |
-            <a href="#details">Detalles</a> |
-            <a href="#travel">Viaje</a> |
-            <a href="#rsvp">Confirmar Asistencia</a> |
+            <a href="#story">Nuestra Historia</a>
+            <a href="#details">Detalles</a>
+            <a href="#travel">Viaje</a>
+            <a href="#rsvp">Confirmar Asistencia</a>
             <a href="#registry">Regalos</a>
         </div>
 
@@ -446,8 +471,9 @@
             <div class="section-title lang-en">Wedding Details</div>
             <div class="section-title lang-es">Detalles de la Boda</div>
 
-            <div class="logo-container" style="text-align: center;">
-                <img src="images/logo_bella_transp2.png" alt="Bellasombra Logo" style="max-width: 500px; height: auto;">
+            <div class="logo-container" style="text-align: center; margin: 20px 0;">
+                <img src="images/logo_bella_transp2.png" alt="Bellasombra Logo"
+                    style="max-width: 90%; width: 400px; height: auto;">
             </div>
 
             <div class="event-details">
