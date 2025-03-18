@@ -224,6 +224,84 @@
                 right: 10px;
             }
         }
+
+        /* Photo Train Styles */
+        .photo-train-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 40px auto;
+            overflow: hidden;
+            height: 250px;
+        }
+
+        .photo-train {
+            display: flex;
+            position: relative;
+            animation: scroll-train 40s linear infinite;
+            width: max-content;
+        }
+
+        .train-slide {
+            flex: 0 0 auto;
+            margin: 0 10px;
+            height: 250px;
+            width: auto;
+        }
+
+        .train-slide img {
+            height: 100%;
+            width: auto;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(88, 47, 14, 0.2);
+        }
+
+        @keyframes scroll-train {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .train-prev,
+        .train-next {
+            display: none;
+        }
+
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .train-prev,
+            .train-next {
+                padding: 10px;
+                font-size: 18px;
+            }
+
+            .photo-train-container {
+                height: 180px;
+            }
+
+            .train-slide {
+                height: 180px;
+            }
+        }
     </style>
 
 </head>
@@ -261,6 +339,52 @@
         <div id="story" class="section">
             <div class="section-title lang-en">Our Story</div>
             <div class="section-title lang-es">Nuestra Historia</div>
+
+        <!-- Photo Train -->
+        <div class="photo-train-container">
+            <div class="photo-train">
+                <!-- First set of images -->
+                <div class="train-slide">
+                    <img src="photosOfUs/IMG_0388.jpg" alt="Eva and Eric">
+                </div>
+                <div class="train-slide">
+                    <img src="photosOfUs/IMG_0703.jpg" alt="Eva and Eric">
+                </div>
+                <div class="train-slide">
+                    <img src="photosOfUs/IMG_103.JPG" alt="Eva and Eric">
+                </div>
+                <div class="train-slide">
+                    <img src="photosOfUs/IMG_1800.jpg" alt="Eva and Eric">
+                </div>
+                <div class="train-slide">
+                    <img src="photosOfUs/IMG_2137.JPG" alt="Eva and Eric">
+                </div>
+                <div class="train-slide">
+                    <img src="photosOfUs/IMG_4003.jpg" alt="Eva and Eric">
+                </div>
+                <!-- Duplicate set for continuous loop -->
+                <div class="train-slide">
+                    <img src="photosOfUs/IMG_0388.jpg" alt="Eva and Eric">
+                </div>
+                <div class="train-slide">
+                    <img src="photosOfUs/IMG_0703.jpg" alt="Eva and Eric">
+                </div>
+                <div class="train-slide">
+                    <img src="photosOfUs/IMG_103.JPG" alt="Eva and Eric">
+                </div>
+                <div class="train-slide">
+                    <img src="photosOfUs/IMG_1800.jpg" alt="Eva and Eric">
+                </div>
+                <div class="train-slide">
+                    <img src="photosOfUs/IMG_2137.JPG" alt="Eva and Eric">
+                </div>
+                <div class="train-slide">
+                    <img src="photosOfUs/IMG_4003.jpg" alt="Eva and Eric">
+                </div>
+            </div>
+        </div>
+
+        
 
             <p class="lang-en">We met at the University of New Hampshire (UNH) and have been writing our story together
                 ever since. What began as a friendship in college blossomed into a love that has carried us across
