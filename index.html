@@ -262,7 +262,7 @@
             <a href="the-wedding.html"><span class="lang-en">The Wedding</span><span class="lang-es">La Boda</span></a>
             <a href="about-us.html"><span class="lang-en">About us</span><span class="lang-es">Sobre Nosotros</span></a>
             <a href="flights-accommodation.html"><span class="lang-en">Flights & Accommodation</span><span
-                    class="lang-es">Vuelos y Alojamiento</span></a>
+                    class="lang-es">Viajes y Alojamiento</span></a>
             <a href="sevilla.html"><span class="lang-en">Sevilla & Andalucía</span><span class="lang-es">Sevilla y
                     Andalucía</span></a>
             <a href="rsvp.html">RSVP</a>
@@ -298,13 +298,28 @@
 
             const days = Math.floor(difference / (1000 * 60 * 60 * 24));
 
+            // Get current language
+            const currentLang = localStorage.getItem('preferredLanguage') || 'en';
+
             const countdownElement = document.getElementById('countdown');
             if (days > 0) {
-                countdownElement.textContent = `${days} DAYS TO GO!`;
+                if (currentLang === 'es') {
+                    countdownElement.textContent = `¡FALTAN ${days} DÍAS!`;
+                } else {
+                    countdownElement.textContent = `${days} DAYS TO GO!`;
+                }
             } else if (days === 0) {
-                countdownElement.textContent = `TODAY IS THE DAY!`;
+                if (currentLang === 'es') {
+                    countdownElement.textContent = `¡HOY ES EL DÍA!`;
+                } else {
+                    countdownElement.textContent = `TODAY IS THE DAY!`;
+                }
             } else {
-                countdownElement.textContent = `JUST MARRIED!`;
+                if (currentLang === 'es') {
+                    countdownElement.textContent = `¡RECIÉN CASADOS!`;
+                } else {
+                    countdownElement.textContent = `JUST MARRIED!`;
+                }
             }
         }
 
@@ -327,6 +342,9 @@
                 enElements.forEach(el => el.style.display = 'none');
                 esElements.forEach(el => el.style.display = 'block');
             }
+
+            // Update countdown with new language
+            updateCountdown();
         }
 
         // Initialize
