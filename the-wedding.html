@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <title>The Wedding - Eva & Eric</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            font-family: 'PT Serif', serif;
+            color: #8f5745;
+            background: #e8dcd0;
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        .content {
+            max-width: 1000px;
+            padding: 40px 20px;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        /* Wedding illustration */
+        .wedding-illustration {
+            margin: 40px auto 30px;
+            text-align: center;
+        }
+
+        .wedding-illustration img {
+            width: 300px;
+            height: auto;
+        }
+
+        .wedding-title {
+            font-family: 'PT Serif', serif;
+            font-size: 72px;
+            font-weight: normal;
+            letter-spacing: 8px;
+            color: #8f5745;
+            margin: 20px 0;
+            text-transform: uppercase;
+        }
+
+        .page-title {
+            font-family: 'PT Serif', serif;
+            font-size: 36px;
+            letter-spacing: 3px;
+            margin: 30px 0;
+            color: #8f5745;
+            text-transform: uppercase;
+        }
+
+        .nav {
+            margin: 50px auto 60px;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .nav a {
+            font-family: 'PT Serif', serif;
+            font-size: 16px;
+            letter-spacing: 1px;
+            color: #8f5745;
+            text-decoration: none;
+            padding-bottom: 3px;
+            border-bottom: 3px solid transparent;
+            transition: border-bottom 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .nav a:hover,
+        .nav a.active {
+            border-bottom: 3px solid #8f5745;
+        }
+
+        .language-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 10;
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 5px 10px;
+            border-radius: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .language-toggle button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-family: 'PT Serif', serif;
+            font-size: 16px;
+            color: #8f5745;
+            padding: 5px 10px;
+            margin: 0 5px;
+            border-radius: 15px;
+            transition: all 0.3s;
+        }
+
+        .language-toggle button.active {
+            background-color: rgba(143, 87, 69, 0.2);
+            font-weight: bold;
+        }
+
+        .event-details {
+            margin: 40px auto;
+            max-width: 700px;
+        }
+
+        .event-name {
+            font-weight: bold;
+            font-size: 24px;
+            margin: 30px 0 10px;
+        }
+
+        .event-time,
+        .event-location {
+            margin: 8px 0;
+            font-size: 18px;
+        }
+
+        .logo-container {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .logo-container img {
+            max-width: 90%;
+            width: 400px;
+            height: auto;
+        }
+
+        .lang-en,
+        .lang-es {
+            display: block;
+        }
+
+        .section-text {
+            max-width: 700px;
+            margin: 30px auto;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 20px 15px;
+            }
+
+            .wedding-title {
+                font-size: 42px;
+                letter-spacing: 4px;
+            }
+
+            .page-title {
+                font-size: 28px;
+            }
+
+            .nav {
+                gap: 15px;
+            }
+
+            .nav a {
+                font-size: 14px;
+            }
+
+            .wedding-illustration img {
+                width: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="language-toggle">
+        <button id="en-btn" class="active" onclick="changeLanguage('en')">EN</button>
+        <button id="es-btn" onclick="changeLanguage('es')">ES</button>
+    </div>
+
+    <div class="content">
+        <!-- Wedding Illustration -->
+        <div class="wedding-illustration">
+            <img src="images/pRBjJK01.svg" alt="Wedding Cake"
+                style="width: 300px; height: auto; filter: invert(39%) sepia(10%) saturate(1820%) hue-rotate(332deg) brightness(95%) contrast(88%);">
+        </div>
+
+        <div class="wedding-title">EVA & ERIC</div>
+
+        <!-- Navigation Menu -->
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="the-wedding.html" class="active">The Wedding</a>
+            <a href="about-us.html">About us</a>
+            <a href="flights-accommodation.html">Flights & Accommodation</a>
+            <a href="sevilla.html">Sevilla & Andalucía</a>
+            <a href="rsvp.html">RSVP</a>
+        </nav>
+
+        <div class="page-title lang-en">The Wedding</div>
+        <div class="page-title lang-es">La Boda</div>
+
+        <div class="logo-container">
+            <img src="images/logo_bella_transp2.png" alt="Bellasombra Logo">
+        </div>
+
+        <div class="event-details">
+            <div class="event-name lang-en">Ceremony</div>
+            <div class="event-name lang-es">Ceremonia</div>
+            <div class="event-time lang-en">Saturday, July 18, 2026 | 6:00 PM</div>
+            <div class="event-time lang-es">Sábado, 18 de Julio, 2026 | 18:00</div>
+            <div class="event-location">Bellasombra Garden</div>
+        </div>
+
+        <div class="event-details">
+            <div class="event-name lang-en">Reception</div>
+            <div class="event-name lang-es">Recepción</div>
+            <div class="event-time lang-en">Saturday, July 18, 2026 | 7:30 PM</div>
+            <div class="event-time lang-es">Sábado, 18 de Julio, 2026 | 19:30</div>
+            <div class="event-location">Bellasombra House</div>
+        </div>
+
+        <div class="section-text">
+            <p class="lang-en">Black tie formal.<br>Outdoor ceremony, reception to follow.</p>
+            <p class="lang-es">Vestimenta formal de etiqueta.<br>Ceremonia al aire libre, seguida de recepción.</p>
+        </div>
+
+        <div class="section-text">
+            <p class="lang-en">
+                Bellasombra is a stunning estate located just outside Sevilla, surrounded by gardens and olive groves.
+                The ceremony will take place in the garden at sunset, followed by dinner and dancing under the stars.
+            </p>
+            <p class="lang-es">
+                Bellasombra es una finca impresionante situada a las afueras de Sevilla, rodeada de jardines y olivares.
+                La ceremonia tendrá lugar en el jardín al atardecer, seguida de cena y baile bajo las estrellas.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function changeLanguage(lang) {
+            document.getElementById('en-btn').classList.remove('active');
+            document.getElementById('es-btn').classList.remove('active');
+            document.getElementById(lang + '-btn').classList.add('active');
+
+            const enElements = document.querySelectorAll('.lang-en');
+            const esElements = document.querySelectorAll('.lang-es');
+
+            if (lang === 'en') {
+                enElements.forEach(el => el.style.display = 'block');
+                esElements.forEach(el => el.style.display = 'none');
+            } else {
+                enElements.forEach(el => el.style.display = 'none');
+                esElements.forEach(el => el.style.display = 'block');
+            }
+        }
+
+        changeLanguage('en');
+    </script>
+</body>
+
+</html>

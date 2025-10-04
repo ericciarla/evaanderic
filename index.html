@@ -9,7 +9,6 @@
         href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
 
-
     <title>Eva & Eric's Wedding | Boda de Eva y Eric</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
@@ -21,129 +20,85 @@
             margin: 0;
             padding: 0;
             font-family: 'PT Serif', serif;
-            color: rgb(88, 47, 14);
-            background: #faf0e6;
+            color: #8f5745;
+            background: #e8dcd0;
             font-size: 18px;
             line-height: 1.6;
             text-align: center;
         }
 
-        #simulation {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
+        .content {
+            max-width: 1000px;
+            padding: 40px 20px;
+            position: relative;
+            margin: 0 auto;
         }
 
-        .content {
-            max-width: 800px;
-            padding: 20px;
-            position: relative;
-            z-index: 1;
-            margin: 40px auto;
+        /* Wedding illustration */
+        .wedding-illustration {
+            margin: 40px auto 30px;
+            text-align: center;
+        }
+
+        .wedding-illustration img {
+            width: 300px;
+            height: auto;
         }
 
         .wedding-title {
-            font-family: 'Great Vibes', cursive;
-            font-size: 60px;
-            color: rgb(88, 47, 14);
-            margin-bottom: 20px;
-            line-height: 1.2;
+            font-family: 'PT Serif', serif;
+            font-size: 72px;
+            font-weight: normal;
+            letter-spacing: 8px;
+            color: #8f5745;
+            margin: 20px 0;
+            text-transform: uppercase;
         }
 
         .wedding-date {
             font-family: 'PT Serif', serif;
+            font-size: 18px;
+            letter-spacing: 3px;
+            margin: 15px 0;
+            color: #8f5745;
+            text-transform: uppercase;
+        }
+
+        .countdown {
+            font-family: 'PT Serif', serif;
             font-size: 22px;
-            margin-bottom: 40px;
-            color: rgb(112, 66, 20);
+            letter-spacing: 2px;
+            margin: 20px 0 40px;
+            color: #8f5745;
+            text-transform: uppercase;
         }
 
-        .divider {
-            display: inline-block;
-            width: 150px;
-            height: 2px;
-            background-color: rgba(88, 47, 14, 0.3);
-            margin: 30px 0;
-        }
-
-        h1,
-        h2,
-        h3,
-        p {
-            line-height: 1.5;
-            margin: 1.5em 0;
-        }
-
-        a {
-            color: rgb(112, 66, 20);
-            text-decoration: none;
-            position: relative;
-            z-index: 2;
-            transition: color 0.3s;
-        }
-
-        a:hover {
-            color: rgb(155, 93, 36);
-        }
-
+        /* Navigation styling to match the photo */
         .nav {
-            margin: 40px 0;
-            background-color: rgba(94, 115, 82, 0.15);
-            padding: 12px 15px;
-            border-radius: 8px;
-            display: inline-block;
-            box-shadow: 0 2px 4px rgba(88, 47, 14, 0.1);
+            margin: 50px auto 60px;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
         }
 
         .nav a {
-            margin: 0 15px;
-            padding: 5px 10px;
-            font-size: 18px;
+            font-family: 'PT Serif', serif;
+            font-size: 16px;
             letter-spacing: 1px;
-            color: rgb(71, 89, 62);
-            font-weight: 500;
-            transition: all 0.3s ease;
-            position: relative;
+            color: #8f5745;
+            text-decoration: none;
+            padding-bottom: 3px;
+            border-bottom: 3px solid transparent;
+            transition: border-bottom 0.3s ease;
+            white-space: nowrap;
         }
 
-        .nav a:not(:last-child)::after {
-            content: "|";
-            position: absolute;
-            right: -15px;
-            color: rgb(71, 89, 62, 0.7);
-        }
-
-        .nav a:hover {
-            color: rgb(53, 66, 48);
-            background-color: rgba(94, 115, 82, 0.1);
-            border-radius: 4px;
-        }
-
-        .section {
-            margin: 60px 0;
-        }
-
-        .section-title {
-            font-size: 28px;
-            margin-bottom: 20px;
-            color: rgb(88, 47, 14);
-        }
-
-        .event-details {
-            margin: 30px 0;
-        }
-
-        .event-name {
-            font-weight: bold;
-            font-size: 22px;
-            margin-bottom: 5px;
-        }
-
-        .event-time,
-        .event-location {
-            margin: 5px 0;
+        .nav a:hover,
+        .nav a.active {
+            border-bottom: 3px solid #8f5745;
         }
 
         .language-toggle {
@@ -151,7 +106,7 @@
             top: 20px;
             right: 20px;
             z-index: 10;
-            background-color: rgba(255, 255, 255, 0.7);
+            background-color: rgba(255, 255, 255, 0.5);
             padding: 5px 10px;
             border-radius: 20px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -163,7 +118,7 @@
             cursor: pointer;
             font-family: 'PT Serif', serif;
             font-size: 16px;
-            color: rgb(88, 47, 14);
+            color: #8f5745;
             padding: 5px 10px;
             margin: 0 5px;
             border-radius: 15px;
@@ -171,32 +126,64 @@
         }
 
         .language-toggle button.active {
-            background-color: rgba(88, 47, 14, 0.2);
+            background-color: rgba(143, 87, 69, 0.2);
             font-weight: bold;
         }
 
-        .travel-card {
-            background-color: rgba(255, 255, 255, 0.6);
+        .welcome-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+
+        .welcome-text {
+            font-size: 20px;
+            line-height: 1.8;
+            flex: 1;
+            max-width: 500px;
+            color: #8f5745;
+        }
+
+        .welcome-image {
+            flex-shrink: 0;
+        }
+
+        .welcome-image img {
+            width: auto;
+            height: auto;
+            max-width: 350px;
             border-radius: 8px;
-            padding: 20px;
-            margin: 15px 0;
-            text-align: left;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 3px 10px rgba(143, 87, 69, 0.2);
         }
 
-        .travel-card h3 {
-            margin-top: 0;
-            border-bottom: 1px solid rgba(88, 47, 14, 0.2);
-            padding-bottom: 8px;
+        /* RSVP Button */
+        .rsvp-button-container {
+            margin: 40px auto;
+            text-align: center;
         }
 
-        .travel-card ul {
-            padding-left: 20px;
-            text-align: left;
+        .rsvp-button {
+            display: inline-block;
+            font-family: 'PT Serif', serif;
+            font-size: 18px;
+            letter-spacing: 2px;
+            color: #e8dcd0;
+            background-color: #8f5745;
+            text-decoration: none;
+            padding: 15px 40px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            box-shadow: 0 3px 10px rgba(143, 87, 69, 0.3);
         }
 
-        .travel-card li {
-            margin: 8px 0;
+        .rsvp-button:hover {
+            background-color: #754739;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(143, 87, 69, 0.4);
         }
 
         .lang-en,
@@ -204,448 +191,127 @@
             display: block;
         }
 
-        /* Adjustments for mobile devices */
         @media (max-width: 768px) {
-            #simulation {
-                display: none;
-            }
-
-            body {
-                font-size: 18px;
-            }
-
             .content {
-                padding: 15px;
-                width: 100%;
-                max-width: 100%;
+                padding: 20px 15px;
             }
 
             .wedding-title {
                 font-size: 42px;
+                letter-spacing: 4px;
             }
 
-            .nav {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                padding: 10px 5px;
-                gap: 8px;
-                width: 100%;
-                box-sizing: border-box;
-            }
-
-            .nav a {
-                margin: 2px;
+            .wedding-date {
                 font-size: 16px;
-                white-space: nowrap;
             }
 
-            .nav a:not(:last-child)::after {
-                display: none;
-            }
-
-            .language-toggle {
-                top: 10px;
-                right: 10px;
-            }
-        }
-
-        /* Photo Train Styles */
-        .photo-train-container {
-            position: relative;
-            width: 100%;
-            max-width: 800px;
-            margin: 40px auto;
-            overflow: hidden;
-            height: 250px;
-            display: flex;
-            justify-content: center;
-        }
-
-        /* Left gradient overlay */
-        .photo-train-container::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 80px;
-            height: 100%;
-            background: linear-gradient(to right, #faf0e6, transparent);
-            z-index: 2;
-            pointer-events: none;
-        }
-
-        /* Right gradient overlay */
-        .photo-train-container::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 80px;
-            height: 100%;
-            background: linear-gradient(to left, #faf0e6, transparent);
-            z-index: 2;
-            pointer-events: none;
-        }
-
-        .photo-train {
-            display: flex;
-            position: relative;
-            animation: infinite-scroll-train 40s linear infinite;
-            width: max-content;
-            /* Ensure elements stay in the same line */
-            white-space: nowrap;
-        }
-
-        .train-slide {
-            flex: 0 0 auto;
-            margin: 0 5px;
-            /* Reduced margin between photos */
-            height: 250px;
-            width: auto;
-            position: relative;
-            display: inline-block;
-        }
-
-        .train-slide img {
-            height: 100%;
-            width: auto;
-            border-radius: 8px;
-            box-shadow: 0 3px 10px rgba(88, 47, 14, 0.2);
-            transition: transform 0.3s ease;
-        }
-
-        .train-slide img:hover {
-            transform: scale(1.05);
-        }
-
-        /* Fixed keyframes for truly seamless animation */
-        @keyframes infinite-scroll-train {
-            from {
-                transform: translateX(0);
-            }
-
-            to {
-                /* Ensure we move exactly the width of the first set of images */
-                transform: translateX(-50%);
-            }
-        }
-
-        .train-prev,
-        .train-next {
-            display: none;
-        }
-
-        .fade {
-            animation-name: fade;
-            animation-duration: 1.5s;
-        }
-
-        @keyframes fade {
-            from {
-                opacity: .4
-            }
-
-            to {
-                opacity: 1
-            }
-        }
-
-        @media (max-width: 768px) {
-
-            .train-prev,
-            .train-next {
-                padding: 10px;
+            .countdown {
                 font-size: 18px;
             }
 
-            .photo-train-container {
-                height: 180px;
+            .nav {
+                gap: 15px;
             }
 
-            .photo-train-container::before,
-            .photo-train-container::after {
-                width: 60px;
+            .nav a {
+                font-size: 14px;
             }
 
-            .train-slide {
-                height: 180px;
+            .welcome-section {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .welcome-text {
+                max-width: 100%;
+            }
+
+            .rsvp-button {
+                font-size: 16px;
+                padding: 12px 30px;
+            }
+
+            .wedding-illustration img {
+                width: 200px;
             }
         }
     </style>
-
 </head>
 
 <body>
-    <!-- Canvas element removed -->
-
     <div class="language-toggle">
         <button id="en-btn" class="active" onclick="changeLanguage('en')">EN</button>
         <button id="es-btn" onclick="changeLanguage('es')">ES</button>
     </div>
 
     <div class="content">
-        <div class="wedding-title">Eva & Eric</div>
-        <div class="wedding-date lang-en">July 18, 2026</div>
-        <div class="wedding-date lang-es">18 de Julio, 2026</div>
-        <div class="divider"></div>
-
-        <div class="nav lang-en">
-            <a href="#story">Our Story</a>
-            <a href="#details">Details</a>
-            <a href="#travel">Travel</a>
-            <a href="#rsvp">RSVP</a>
-            <a href="#registry">Registry</a>
+        <!-- Wedding Illustration -->
+        <div class="wedding-illustration">
+            <img src="images/pRBjJK01.svg" alt="Wedding Cake"
+                style="width: 300px; height: auto; filter: invert(39%) sepia(10%) saturate(1820%) hue-rotate(332deg) brightness(95%) contrast(88%);">
         </div>
 
-        <div class="nav lang-es">
-            <a href="#story">Nuestra Historia</a>
-            <a href="#details">Detalles</a>
-            <a href="#travel">Viaje</a>
-            <a href="#rsvp">Confirmar Asistencia</a>
-            <a href="#registry">Regalos</a>
-        </div>
+        <div class="wedding-title">EVA & ERIC</div>
+        <div class="wedding-date lang-en">JULY 18, 2026 · SEVILLA, SPAIN</div>
+        <div class="wedding-date lang-es">18 DE JULIO, 2026 · SEVILLA, ESPAÑA</div>
+        <div class="countdown" id="countdown">LOADING...</div>
 
-        <div id="story" class="section">
-            <div class="section-title lang-en">Our Story</div>
-            <div class="section-title lang-es">Nuestra Historia</div>
+        <!-- Navigation Menu -->
+        <nav class="nav">
+            <a href="index.html" class="active">Home</a>
+            <a href="the-wedding.html">The Wedding</a>
+            <a href="about-us.html">About us</a>
+            <a href="flights-accommodation.html">Flights & Accommodation</a>
+            <a href="sevilla.html">Sevilla & Andalucía</a>
+            <a href="rsvp.html">RSVP</a>
+        </nav>
 
-            <!-- Photo Train -->
-            <div class="photo-train-container">
-                <div class="photo-train">
-                    <!-- First set of images -->
-                    <div class="train-slide">
-                        <img src="photosOfUs/IMG_0388.jpg" alt="Eva and Eric">
-                    </div>
-                    <div class="train-slide">
-                        <img src="photosOfUs/IMG_0703.jpg" alt="Eva and Eric">
-                    </div>
-                    <div class="train-slide">
-                        <img src="photosOfUs/IMG_103.JPG" alt="Eva and Eric">
-                    </div>
-                    <div class="train-slide">
-                        <img src="photosOfUs/IMG_1800.jpg" alt="Eva and Eric">
-                    </div>
-                    <div class="train-slide">
-                        <img src="photosOfUs/IMG_2137.JPG" alt="Eva and Eric">
-                    </div>
-                    <div class="train-slide">
-                        <img src="photosOfUs/IMG_4003.jpg" alt="Eva and Eric">
-                    </div>
-                    <!-- Duplicate set for continuous loop - exact same order to ensure seamless transition -->
-                    <div class="train-slide">
-                        <img src="photosOfUs/IMG_0388.jpg" alt="Eva and Eric">
-                    </div>
-                    <div class="train-slide">
-                        <img src="photosOfUs/IMG_0703.jpg" alt="Eva and Eric">
-                    </div>
-                    <div class="train-slide">
-                        <img src="photosOfUs/IMG_103.JPG" alt="Eva and Eric">
-                    </div>
-                    <div class="train-slide">
-                        <img src="photosOfUs/IMG_1800.jpg" alt="Eva and Eric">
-                    </div>
-                    <div class="train-slide">
-                        <img src="photosOfUs/IMG_2137.JPG" alt="Eva and Eric">
-                    </div>
-                    <div class="train-slide">
-                        <img src="photosOfUs/IMG_4003.jpg" alt="Eva and Eric">
-                    </div>
-                </div>
+        <!-- Welcome Section with Text and Image -->
+        <div class="welcome-section">
+            <div class="welcome-text">
+                <p class="lang-en">Join us in beautiful Sevilla as we celebrate our love and the beginning of our new
+                    journey together. We can't wait to share this special day with our family and friends!</p>
+                <p class="lang-es">Únanse a nosotros en la hermosa Sevilla mientras celebramos nuestro amor y el
+                    comienzo de
+                    nuestro nuevo viaje juntos. ¡Estamos ansiosos por compartir este día especial con nuestra familia y
+                    amigos!</p>
             </div>
-
-
-
-            <p class="lang-en">We met at the University of New Hampshire (UNH) and have been writing our story together
-                ever since. What began as a friendship in college blossomed into a love that has carried us across
-                oceans. Join us in beautiful Sevilla as we celebrate the next chapter of our journey surrounded by the
-                people we love most.</p>
-
-            <p class="lang-es">Nos conocimos en la Universidad de New Hampshire (UNH) y desde entonces hemos estado
-                escribiendo nuestra historia juntos. Lo que comenzó como una amistad en la universidad floreció en un
-                amor que nos ha llevado a través de océanos. Únanse a nosotros en la hermosa Sevilla mientras celebramos
-                el próximo capítulo de nuestro viaje rodeados de las personas que más queremos.</p>
-        </div>
-
-        <div id="details" class="section">
-            <div class="section-title lang-en">Wedding Details</div>
-            <div class="section-title lang-es">Detalles de la Boda</div>
-
-            <div class="logo-container" style="text-align: center; margin: 20px 0;">
-                <img src="images/logo_bella_transp2.png" alt="Bellasombra Logo"
-                    style="max-width: 90%; width: 400px; height: auto;">
-            </div>
-
-            <div class="event-details">
-                <div class="event-name lang-en">Ceremony</div>
-                <div class="event-name lang-es">Ceremonia</div>
-                <div class="event-time lang-en">Saturday, July 18, 2026 | 6:00 PM</div>
-                <div class="event-time lang-es">Sábado, 18 de Julio, 2026 | 18:00</div>
-                <div class="event-location">Bellasombra Garden</div>
-            </div>
-
-            <div class="event-details">
-                <div class="event-name lang-en">Reception</div>
-                <div class="event-name lang-es">Recepción</div>
-                <div class="event-time lang-en">Saturday, July 18, 2026 | 7:30 PM</div>
-                <div class="event-time lang-es">Sábado, 18 de Julio, 2026 | 19:30</div>
-                <div class="event-location">Bellasombra House</div>
-            </div>
-
-            <p class="lang-en">Black tie formal.<br>Outdoor ceremony, reception to follow.</p>
-            <p class="lang-es">Vestimenta formal de etiqueta.<br>Ceremonia al aire libre, seguida de recepción.</p>
-        </div>
-
-        <div id="travel" class="section">
-            <div class="section-title lang-en">Travel Information</div>
-            <div class="section-title lang-es">Información de Viaje</div>
-
-            <div class="travel-card">
-                <h3 class="lang-en">Getting to Sevilla</h3>
-                <h3 class="lang-es">Cómo llegar a Sevilla</h3>
-
-                <div class="lang-en">
-                    <p>For guests traveling from Boston and the US:</p>
-                    <ul>
-                        <li><strong>Recommended Airlines:</strong> Iberia (with connections through Madrid), American
-                            Airlines (partnered with Iberia), Delta (partnered with Air Europa), and TAP Air Portugal
-                            (with connections through Lisbon)</li>
-                        <li><strong>Flight Time:</strong> Approximately 7-8 hours to Madrid or Lisbon + 1 hour
-                            connection to
-                            Sevilla</li>
-                        <li><strong>Book Early:</strong> We recommend booking flights 4-6 months in advance for the best
-                            rates</li>
-                    </ul>
-                </div>
-
-                <div class="lang-es">
-                    <p>Para invitados que viajan desde Boston y EE.UU.:</p>
-                    <ul>
-                        <li><strong>Aerolíneas recomendadas:</strong> Iberia (con conexiones a través de Madrid),
-                            American Airlines (asociada con Iberia), Delta (asociada con Air Europa) y TAP Air Portugal
-                            (con conexiones a través de Lisboa)</li>
-                        <li><strong>Tiempo de vuelo:</strong> Aproximadamente 7-8 horas a Madrid o Lisboa + 1 hora de
-                            conexión a
-                            Sevilla</li>
-                        <li><strong>Reserve con anticipación:</strong> Recomendamos reservar vuelos con 4-6 meses de
-                            anticipación para obtener las mejores tarifas</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="travel-card">
-                <h3 class="lang-en">Accommodations</h3>
-                <h3 class="lang-es">Alojamiento</h3>
-
-                <div class="lang-en">
-                    <p>We've arranged special rates at the following hotels, all within 15 minutes of Bellasombra:</p>
-                    <ul>
-                        <li><strong>Hotel Alfonso XIII</strong> - Luxury option in the heart of Sevilla (use code
-                            EVERIC26)</li>
-                        <li><strong>Hotel Casa 1800</strong> - Boutique hotel in historic district (use code EVERIC26)
-                        </li>
-                        <li><strong>NH Collection Sevilla</strong> - Modern accommodations with amenities (mention our
-                            wedding)</li>
-                    </ul>
-                    <p>We recommend booking your accommodation by January 2026. Please let us know if you need
-                        assistance.</p>
-                </div>
-
-                <div class="lang-es">
-                    <p>Hemos acordado tarifas especiales en los siguientes hoteles, todos a menos de 15 minutos de
-                        Bellasombra:</p>
-                    <ul>
-                        <li><strong>Hotel Alfonso XIII</strong> - Opción de lujo en el corazón de Sevilla (use el código
-                            EVERIC26)</li>
-                        <li><strong>Hotel Casa 1800</strong> - Hotel boutique en el barrio histórico (use el código
-                            EVERIC26)</li>
-                        <li><strong>NH Collection Sevilla</strong> - Alojamiento moderno con comodidades (mencione
-                            nuestra boda)</li>
-                    </ul>
-                    <p>Recomendamos reservar su alojamiento antes de enero de 2026. Por favor, háganos saber si necesita
-                        ayuda.</p>
-                </div>
-            </div>
-
-            <div class="travel-card">
-                <h3 class="lang-en">Transportation in Sevilla</h3>
-                <h3 class="lang-es">Transporte en Sevilla</h3>
-
-                <div class="lang-en">
-                    <p>Bellasombra is located just 20 minutes from Sevilla Airport and 15 minutes from downtown Sevilla.
-                    </p>
-                    <ul>
-                        <li><strong>From the Airport:</strong> Taxis are readily available (approx. €25-30)</li>
-                        <li><strong>From Downtown:</strong> We'll be arranging shuttles from central pickup points</li>
-                        <li><strong>Rental Cars:</strong> Not necessary for the wedding, but useful if you plan to
-                            explore Andalusia</li>
-                    </ul>
-                </div>
-
-                <div class="lang-es">
-                    <p>Bellasombra está ubicado a solo 20 minutos del Aeropuerto de Sevilla y a 15 minutos del centro de
-                        Sevilla.</p>
-                    <ul>
-                        <li><strong>Desde el Aeropuerto:</strong> Hay taxis disponibles (aprox. €25-30)</li>
-                        <li><strong>Desde el Centro:</strong> Organizaremos transporte desde puntos céntricos</li>
-                        <li><strong>Coches de Alquiler:</strong> No necesarios para la boda, pero útiles si planea
-                            explorar Andalucía</li>
-                    </ul>
-                </div>
+            <div class="welcome-image">
+                <img src="photosOfUs/EVA-&-ERIC-236.webp" alt="Eva and Eric">
             </div>
         </div>
 
-        <div id="rsvp" class="section">
-            <div class="section-title lang-en">RSVP</div>
-            <div class="section-title lang-es">Confirmar Asistencia</div>
-
-            <p class="lang-en">Please let us know if you'll be joining us by May 1, 2026.<br>
-                <a href="mailto:evanderic@example.com">evanderic@example.com</a>
-            </p>
-
-            <p class="lang-es">Por favor, háganos saber si nos acompañará antes del 1 de Mayo de 2026.<br>
-                <a href="mailto:evanderic@example.com">evanderic@example.com</a>
-            </p>
+        <!-- RSVP Button -->
+        <div class="rsvp-button-container">
+            <a href="rsvp.html" class="rsvp-button">RSVP</a>
         </div>
-
-        <div id="registry" class="section">
-            <div class="section-title lang-en">Registry</div>
-            <div class="section-title lang-es">Lista de Regalos</div>
-
-            <p class="lang-en">Your presence at our wedding is the greatest gift. However, if you wish to honor us with
-                a gift, we've registered at the following places:</p>
-            <p class="lang-es">Su presencia en nuestra boda es el mayor regalo. Sin embargo, si desea honrarnos con un
-                regalo, nos hemos registrado en los siguientes lugares:</p>
-
-            <p>
-                <a href="#" target="_blank">El Corte Inglés</a> |
-                <a href="#" target="_blank">Amazon</a> |
-                <a href="#" target="_blank">Honeymoon Fund / Fondo de Luna de Miel</a>
-            </p>
-        </div>
-
-        <div class="divider"></div>
-        <p class="lang-en">With love,<br><span style="font-family: 'Great Vibes', cursive; font-size: 30px;">Eva &
-                Eric</span></p>
-        <p class="lang-es">Con amor,<br><span style="font-family: 'Great Vibes', cursive; font-size: 30px;">Eva &
-                Eric</span></p>
     </div>
 
     <script>
-        // Background animation code removed/disabled
-        const canvas = document.getElementById('simulation');
-        if (canvas) {
-            canvas.style.display = 'none'; // Hide the canvas if it exists
+        // Countdown timer
+        function updateCountdown() {
+            const weddingDate = new Date('2026-07-18T18:00:00');
+            const now = new Date();
+            const difference = weddingDate - now;
+
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+
+            const countdownElement = document.getElementById('countdown');
+            if (days > 0) {
+                countdownElement.textContent = `${days} DAYS TO GO!`;
+            } else if (days === 0) {
+                countdownElement.textContent = `TODAY IS THE DAY!`;
+            } else {
+                countdownElement.textContent = `JUST MARRIED!`;
+            }
         }
 
         // Language toggle functionality
         function changeLanguage(lang) {
-            // Update active button
             document.getElementById('en-btn').classList.remove('active');
             document.getElementById('es-btn').classList.remove('active');
             document.getElementById(lang + '-btn').classList.add('active');
 
-            // Show/hide language-specific elements
             const enElements = document.querySelectorAll('.lang-en');
             const esElements = document.querySelectorAll('.lang-es');
 
@@ -659,34 +325,9 @@
         }
 
         // Initialize
-        changeLanguage('en'); // Default to English
-
-        // Photo train pause on hover
-        document.addEventListener('DOMContentLoaded', function () {
-            const photoTrain = document.querySelector('.photo-train');
-            const trainSlides = document.querySelectorAll('.train-slide');
-
-            // Pause animation on hover
-            trainSlides.forEach(slide => {
-                slide.addEventListener('mouseenter', () => {
-                    photoTrain.style.animationPlayState = 'paused';
-                });
-
-                slide.addEventListener('mouseleave', () => {
-                    photoTrain.style.animationPlayState = 'running';
-                });
-            });
-
-            // Also pause the entire container on hover
-            const photoTrainContainer = document.querySelector('.photo-train-container');
-            photoTrainContainer.addEventListener('mouseenter', () => {
-                photoTrain.style.animationPlayState = 'paused';
-            });
-
-            photoTrainContainer.addEventListener('mouseleave', () => {
-                photoTrain.style.animationPlayState = 'running';
-            });
-        });
+        changeLanguage('en');
+        updateCountdown();
+        setInterval(updateCountdown, 3600000); // Update every hour
     </script>
 </body>
 

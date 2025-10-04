@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <title>Andalucía - Eva & Eric</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            font-family: 'PT Serif', serif;
+            color: #8f5745;
+            background: #e8dcd0;
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        .content {
+            max-width: 1000px;
+            padding: 40px 20px;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .wedding-title {
+            font-family: 'PT Serif', serif;
+            font-size: 72px;
+            font-weight: normal;
+            letter-spacing: 8px;
+            color: #8f5745;
+            margin: 20px 0;
+            text-transform: uppercase;
+        }
+
+        .page-title {
+            font-family: 'PT Serif', serif;
+            font-size: 36px;
+            letter-spacing: 3px;
+            margin: 30px 0;
+            color: #8f5745;
+            text-transform: uppercase;
+        }
+
+        .nav {
+            margin: 50px auto 60px;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .nav a {
+            font-family: 'PT Serif', serif;
+            font-size: 16px;
+            letter-spacing: 1px;
+            color: #8f5745;
+            text-decoration: none;
+            padding-bottom: 3px;
+            border-bottom: 3px solid transparent;
+            transition: border-bottom 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .nav a:hover,
+        .nav a.active {
+            border-bottom: 3px solid #8f5745;
+        }
+
+        .language-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 10;
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 5px 10px;
+            border-radius: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .language-toggle button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-family: 'PT Serif', serif;
+            font-size: 16px;
+            color: #8f5745;
+            padding: 5px 10px;
+            margin: 0 5px;
+            border-radius: 15px;
+            transition: all 0.3s;
+        }
+
+        .language-toggle button.active {
+            background-color: rgba(143, 87, 69, 0.2);
+            font-weight: bold;
+        }
+
+        .lang-en,
+        .lang-es {
+            display: block;
+        }
+
+        .section-text {
+            max-width: 700px;
+            margin: 30px auto;
+            font-size: 18px;
+            line-height: 1.8;
+            text-align: left;
+        }
+
+        .highlight-box {
+            background-color: rgba(255, 255, 255, 0.6);
+            border-radius: 8px;
+            padding: 25px;
+            margin: 25px auto;
+            max-width: 700px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .highlight-box h3 {
+            margin-top: 0;
+            font-size: 22px;
+            border-bottom: 2px solid rgba(143, 87, 69, 0.2);
+            padding-bottom: 10px;
+        }
+
+        .highlight-box ul {
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        .highlight-box li {
+            margin: 10px 0;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 20px 15px;
+            }
+
+            .wedding-title {
+                font-size: 42px;
+                letter-spacing: 4px;
+            }
+
+            .page-title {
+                font-size: 28px;
+            }
+
+            .nav {
+                gap: 15px;
+            }
+
+            .nav a {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="language-toggle">
+        <button id="en-btn" class="active" onclick="changeLanguage('en')">EN</button>
+        <button id="es-btn" onclick="changeLanguage('es')">ES</button>
+    </div>
+
+    <div class="content">
+        <div class="wedding-title">EVA & ERIC</div>
+
+        <!-- Navigation Menu -->
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="the-wedding.html">The Wedding</a>
+            <a href="about-us.html">About us</a>
+            <a href="flights-accommodation.html">Flights & Accommodation</a>
+            <a href="sevilla.html">Sevilla</a>
+            <a href="andalucia.html" class="active">Andalucía</a>
+            <a href="sweden-meets-spain.html">Sweden meets Spain</a>
+            <a href="other-info.html">Other info</a>
+            <a href="rsvp.html">RSVP</a>
+        </nav>
+
+        <div class="page-title">Andalucía</div>
+
+        <div class="section-text">
+            <p class="lang-en">
+                Andalucía is Spain's southernmost region, famous for its Moorish heritage, white-washed villages,
+                stunning coastline, and warm hospitality. This is the land of flamenco, bullfighting, and some of
+                Spain's most spectacular architecture.
+            </p>
+            <p class="lang-es">
+                Andalucía es la región más meridional de España, famosa por su herencia morisca, pueblos blancos,
+                costa impresionante y cálida hospitalidad. Esta es la tierra del flamenco, las corridas de toros y
+                parte de la arquitectura más espectacular de España.
+            </p>
+        </div>
+
+        <div class="highlight-box">
+            <h3 class="lang-en">Places to Explore</h3>
+            <h3 class="lang-es">Lugares para Explorar</h3>
+
+            <ul class="lang-en">
+                <li><strong>Granada:</strong> Home to the magnificent Alhambra palace (1.5 hours from Sevilla)</li>
+                <li><strong>Córdoba:</strong> Visit the stunning Mezquita mosque-cathedral (45 minutes from Sevilla)
+                </li>
+                <li><strong>Ronda:</strong> Dramatic cliff-top town with a famous bridge (1.5 hours from Sevilla)</li>
+                <li><strong>Cádiz:</strong> Ancient coastal city with beautiful beaches (1.5 hours from Sevilla)</li>
+                <li><strong>White Villages:</strong> Explore charming pueblos blancos like Arcos de la Frontera</li>
+            </ul>
+
+            <ul class="lang-es">
+                <li><strong>Granada:</strong> Hogar del magnífico palacio de la Alhambra (1.5 horas desde Sevilla)</li>
+                <li><strong>Córdoba:</strong> Visite la impresionante mezquita-catedral (45 minutos desde Sevilla)</li>
+                <li><strong>Ronda:</strong> Ciudad espectacular en acantilado con un puente famoso (1.5 horas desde
+                    Sevilla)</li>
+                <li><strong>Cádiz:</strong> Antigua ciudad costera con hermosas playas (1.5 horas desde Sevilla)</li>
+                <li><strong>Pueblos Blancos:</strong> Explore encantadores pueblos blancos como Arcos de la Frontera
+                </li>
+            </ul>
+        </div>
+
+        <div class="highlight-box">
+            <h3 class="lang-en">Regional Cuisine</h3>
+            <h3 class="lang-es">Cocina Regional</h3>
+
+            <ul class="lang-en">
+                <li><strong>Jamón Ibérico:</strong> World-famous cured ham from acorn-fed pigs</li>
+                <li><strong>Gazpacho & Salmorejo:</strong> Refreshing cold soups perfect for the climate</li>
+                <li><strong>Pescaíto Frito:</strong> Fried fish, a specialty of coastal towns</li>
+                <li><strong>Sherry Wine:</strong> Visit the sherry triangle in Jerez, El Puerto, and Sanlúcar</li>
+                <li><strong>Olive Oil:</strong> Andalucía produces some of the world's finest olive oil</li>
+            </ul>
+
+            <ul class="lang-es">
+                <li><strong>Jamón Ibérico:</strong> Jamón curado mundialmente famoso de cerdos alimentados con bellotas
+                </li>
+                <li><strong>Gazpacho y Salmorejo:</strong> Sopas frías refrescantes perfectas para el clima</li>
+                <li><strong>Pescaíto Frito:</strong> Pescado frito, una especialidad de las ciudades costeras</li>
+                <li><strong>Vino de Jerez:</strong> Visite el triángulo del jerez en Jerez, El Puerto y Sanlúcar</li>
+                <li><strong>Aceite de Oliva:</strong> Andalucía produce algunos de los mejores aceites de oliva del
+                    mundo</li>
+            </ul>
+        </div>
+
+        <div class="section-text">
+            <p class="lang-en">
+                If you have extra time before or after the wedding, we highly recommend exploring more of Andalucía.
+                The region offers a perfect blend of history, culture, natural beauty, and incredible food. Let us
+                know if you'd like recommendations for day trips or extended stays!
+            </p>
+            <p class="lang-es">
+                Si tiene tiempo extra antes o después de la boda, recomendamos encarecidamente explorar más de
+                Andalucía. La región ofrece una mezcla perfecta de historia, cultura, belleza natural y comida
+                increíble. ¡Háganos saber si desea recomendaciones para excursiones de un día o estancias prolongadas!
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function changeLanguage(lang) {
+            document.getElementById('en-btn').classList.remove('active');
+            document.getElementById('es-btn').classList.remove('active');
+            document.getElementById(lang + '-btn').classList.add('active');
+
+            const enElements = document.querySelectorAll('.lang-en');
+            const esElements = document.querySelectorAll('.lang-es');
+
+            if (lang === 'en') {
+                enElements.forEach(el => el.style.display = 'block');
+                esElements.forEach(el => el.style.display = 'none');
+            } else {
+                enElements.forEach(el => el.style.display = 'none');
+                esElements.forEach(el => el.style.display = 'block');
+            }
+        }
+
+        changeLanguage('en');
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <title>Flights & Accommodation - Eva & Eric</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            font-family: 'PT Serif', serif;
+            color: #8f5745;
+            background: #e8dcd0;
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        .content {
+            max-width: 1000px;
+            padding: 40px 20px;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        /* Wedding illustration */
+        .wedding-illustration {
+            margin: 40px auto 30px;
+            text-align: center;
+        }
+
+        .wedding-illustration img {
+            width: 300px;
+            height: auto;
+        }
+
+        .wedding-title {
+            font-family: 'PT Serif', serif;
+            font-size: 72px;
+            font-weight: normal;
+            letter-spacing: 8px;
+            color: #8f5745;
+            margin: 20px 0;
+            text-transform: uppercase;
+        }
+
+        .page-title {
+            font-family: 'PT Serif', serif;
+            font-size: 36px;
+            letter-spacing: 3px;
+            margin: 30px 0;
+            color: #8f5745;
+            text-transform: uppercase;
+        }
+
+        .nav {
+            margin: 50px auto 60px;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .nav a {
+            font-family: 'PT Serif', serif;
+            font-size: 16px;
+            letter-spacing: 1px;
+            color: #8f5745;
+            text-decoration: none;
+            padding-bottom: 3px;
+            border-bottom: 3px solid transparent;
+            transition: border-bottom 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .nav a:hover,
+        .nav a.active {
+            border-bottom: 3px solid #8f5745;
+        }
+
+        .language-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 10;
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 5px 10px;
+            border-radius: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .language-toggle button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-family: 'PT Serif', serif;
+            font-size: 16px;
+            color: #8f5745;
+            padding: 5px 10px;
+            margin: 0 5px;
+            border-radius: 15px;
+            transition: all 0.3s;
+        }
+
+        .language-toggle button.active {
+            background-color: rgba(143, 87, 69, 0.2);
+            font-weight: bold;
+        }
+
+        .lang-en,
+        .lang-es {
+            display: block;
+        }
+
+        .section-text {
+            max-width: 700px;
+            margin: 30px auto;
+            font-size: 18px;
+            line-height: 1.8;
+            text-align: left;
+        }
+
+        h3 {
+            font-size: 22px;
+            margin: 40px auto 20px;
+            max-width: 700px;
+            text-align: left;
+        }
+
+        ul {
+            max-width: 700px;
+            margin: 20px auto;
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        p {
+            max-width: 700px;
+            margin: 15px auto;
+            text-align: left;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 20px 15px;
+            }
+
+            .wedding-title {
+                font-size: 42px;
+                letter-spacing: 4px;
+            }
+
+            .page-title {
+                font-size: 28px;
+            }
+
+            .nav {
+                gap: 15px;
+            }
+
+            .nav a {
+                font-size: 14px;
+            }
+
+            .wedding-illustration img {
+                width: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="language-toggle">
+        <button id="en-btn" class="active" onclick="changeLanguage('en')">EN</button>
+        <button id="es-btn" onclick="changeLanguage('es')">ES</button>
+    </div>
+
+    <div class="content">
+        <!-- Wedding Illustration -->
+        <div class="wedding-illustration">
+            <img src="images/pRBjJK01.svg" alt="Wedding Cake"
+                style="width: 300px; height: auto; filter: invert(39%) sepia(10%) saturate(1820%) hue-rotate(332deg) brightness(95%) contrast(88%);">
+        </div>
+
+        <div class="wedding-title">EVA & ERIC</div>
+
+        <!-- Navigation Menu -->
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="the-wedding.html">The Wedding</a>
+            <a href="about-us.html">About us</a>
+            <a href="flights-accommodation.html" class="active">Flights & Accommodation</a>
+            <a href="sevilla.html">Sevilla & Andalucía</a>
+            <a href="rsvp.html">RSVP</a>
+        </nav>
+
+        <div class="page-title lang-en">Flights & Accommodation</div>
+        <div class="page-title lang-es">Vuelos y Alojamiento</div>
+
+        <h3 class="lang-en">Getting to Sevilla</h3>
+        <h3 class="lang-es">Cómo llegar a Sevilla</h3>
+
+        <p class="lang-en">For guests traveling from Boston and the US:</p>
+        <p class="lang-es">Para invitados que viajan desde Boston y EE.UU.:</p>
+
+        <ul class="lang-en">
+            <li><strong>Recommended Airlines:</strong> Iberia (with connections through Madrid), American
+                Airlines (partnered with Iberia), Delta (partnered with Air Europa), and TAP Air Portugal
+                (with connections through Lisbon)</li>
+            <li><strong>Flight Time:</strong> Approximately 7-8 hours to Madrid or Lisbon + 1 hour
+                connection to Sevilla</li>
+            <li><strong>Book Early:</strong> We recommend booking flights 4-6 months in advance for the best
+                rates</li>
+        </ul>
+
+        <ul class="lang-es">
+            <li><strong>Aerolíneas recomendadas:</strong> Iberia (con conexiones a través de Madrid),
+                American Airlines (asociada con Iberia), Delta (asociada con Air Europa) y TAP Air Portugal
+                (con conexiones a través de Lisboa)</li>
+            <li><strong>Tiempo de vuelo:</strong> Aproximadamente 7-8 horas a Madrid o Lisboa + 1 hora de
+                conexión a Sevilla</li>
+            <li><strong>Reserve con anticipación:</strong> Recomendamos reservar vuelos con 4-6 meses de
+                anticipación para obtener las mejores tarifas</li>
+        </ul>
+
+        <h3 class="lang-en">Accommodations</h3>
+        <h3 class="lang-es">Alojamiento</h3>
+
+        <p class="lang-en">We've arranged special rates at the following hotels, all within 15 minutes of Bellasombra:
+        </p>
+        <p class="lang-es">Hemos acordado tarifas especiales en los siguientes hoteles, todos a menos de 15 minutos de
+            Bellasombra:</p>
+
+        <ul class="lang-en">
+            <li><strong>Hotel Alfonso XIII</strong> - Luxury option in the heart of Sevilla (use code
+                EVERIC26)</li>
+            <li><strong>Hotel Casa 1800</strong> - Boutique hotel in historic district (use code EVERIC26)
+            </li>
+            <li><strong>NH Collection Sevilla</strong> - Modern accommodations with amenities (mention our
+                wedding)</li>
+        </ul>
+
+        <ul class="lang-es">
+            <li><strong>Hotel Alfonso XIII</strong> - Opción de lujo en el corazón de Sevilla (use el código
+                EVERIC26)</li>
+            <li><strong>Hotel Casa 1800</strong> - Hotel boutique en el barrio histórico (use el código
+                EVERIC26)</li>
+            <li><strong>NH Collection Sevilla</strong> - Alojamiento moderno con comodidades (mencione
+                nuestra boda)</li>
+        </ul>
+
+        <p class="lang-en">We recommend booking your accommodation by January 2026. Please let us know if you need
+            assistance.</p>
+        <p class="lang-es">Recomendamos reservar su alojamiento antes de enero de 2026. Por favor, háganos saber si
+            necesita
+            ayuda.</p>
+
+        <h3 class="lang-en">Transportation in Sevilla</h3>
+        <h3 class="lang-es">Transporte en Sevilla</h3>
+
+        <p class="lang-en">Bellasombra is located just 20 minutes from Sevilla Airport and 15 minutes from downtown
+            Sevilla.</p>
+        <p class="lang-es">Bellasombra está ubicado a solo 20 minutos del Aeropuerto de Sevilla y a 15 minutos del
+            centro de
+            Sevilla.</p>
+
+        <ul class="lang-en">
+            <li><strong>From the Airport:</strong> Taxis are readily available (approx. €25-30)</li>
+            <li><strong>From Downtown:</strong> We'll be arranging shuttles from central pickup points</li>
+            <li><strong>Rental Cars:</strong> Not necessary for the wedding, but useful if you plan to
+                explore Andalusia</li>
+        </ul>
+
+        <ul class="lang-es">
+            <li><strong>Desde el Aeropuerto:</strong> Hay taxis disponibles (aprox. €25-30)</li>
+            <li><strong>Desde el Centro:</strong> Organizaremos transporte desde puntos céntricos</li>
+            <li><strong>Coches de Alquiler:</strong> No necesarios para la boda, pero útiles si planea
+                explorar Andalucía</li>
+        </ul>
+    </div>
+
+    <script>
+        function changeLanguage(lang) {
+            document.getElementById('en-btn').classList.remove('active');
+            document.getElementById('es-btn').classList.remove('active');
+            document.getElementById(lang + '-btn').classList.add('active');
+
+            const enElements = document.querySelectorAll('.lang-en');
+            const esElements = document.querySelectorAll('.lang-es');
+
+            if (lang === 'en') {
+                enElements.forEach(el => el.style.display = 'block');
+                esElements.forEach(el => el.style.display = 'none');
+            } else {
+                enElements.forEach(el => el.style.display = 'none');
+                esElements.forEach(el => el.style.display = 'block');
+            }
+        }
+
+        changeLanguage('en');
+    </script>
+</body>
+
+</html>
