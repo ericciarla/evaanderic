@@ -203,11 +203,13 @@
 
         <!-- Navigation Menu -->
         <nav class="nav">
-            <a href="index.html">Home</a>
-            <a href="the-wedding.html">The Wedding</a>
-            <a href="about-us.html">About us</a>
-            <a href="flights-accommodation.html" class="active">Flights & Accommodation</a>
-            <a href="sevilla.html">Sevilla & Andalucía</a>
+            <a href="index.html"><span class="lang-en">Home</span><span class="lang-es">Inicio</span></a>
+            <a href="the-wedding.html"><span class="lang-en">The Wedding</span><span class="lang-es">La Boda</span></a>
+            <a href="about-us.html"><span class="lang-en">About us</span><span class="lang-es">Sobre Nosotros</span></a>
+            <a href="flights-accommodation.html" class="active"><span class="lang-en">Flights &
+                    Accommodation</span><span class="lang-es">Vuelos y Alojamiento</span></a>
+            <a href="sevilla.html"><span class="lang-en">Sevilla & Andalucía</span><span class="lang-es">Sevilla y
+                    Andalucía</span></a>
             <a href="rsvp.html">RSVP</a>
         </nav>
 
@@ -222,8 +224,7 @@
         <p class="lang-es">Si vuela desde EE.UU., recomendamos conectar al Aeropuerto de Sevilla vía Madrid o Lisboa.
         </p>
 
-    
-        <p class="lang-es">Para invitados que viajan desde Boston y EE.UU.:</p>
+        <p class="lang-en"><strong>For guests traveling from Boston and the US:</strong></p>
 
         <ul class="lang-en">
             <li><strong>Recommended Airlines:</strong> Iberia (with connections through Madrid) and TAP Air Portugal
@@ -231,6 +232,21 @@
             <li><strong>Book Early:</strong> We recommend booking flights 4-6 months in advance for the best
                 rates</li>
         </ul>
+
+        <p class="lang-es"><strong>Para invitados que viajan desde Extremadura y Madrid:</strong></p>
+
+        <ul class="lang-es">
+            <li><strong>En Coche:</strong> Desde Madrid toma aproximadamente 5-5.5 horas por la A-5 y A-66. Desde
+                Extremadura (Badajoz/Cáceres) toma 2.5-3 horas por la A-66 hacia el sur</li>
+            <li><strong>En Tren:</strong> AVE desde Madrid-Sevilla (2.5 horas). Trenes regionales desde Mérida y Zafra
+                con conexión en Sevilla Santa Justa. Reservas en <a href="https://www.renfe.com" target="_blank"
+                    style="color: #8f5745; text-decoration: underline;">renfe.com</a></li>
+            <li><strong>En Autobús:</strong> Desde Madrid: ALSA ofrece servicios directos (6-7 horas) a la Estación de
+                Autobuses Plaza de Armas en Sevilla. Desde Extremadura: Servicios regionales disponibles desde Badajoz y
+                Mérida</li>
+        </ul>
+
+        <p class="lang-es"><strong>Para invitados que viajan desde EE.UU.:</strong></p>
 
         <ul class="lang-es">
             <li><strong>Aerolíneas recomendadas:</strong> Iberia (con conexiones a través de Madrid),
@@ -294,6 +310,9 @@
 
     <script>
         function changeLanguage(lang) {
+            // Save language preference to localStorage
+            localStorage.setItem('preferredLanguage', lang);
+
             document.getElementById('en-btn').classList.remove('active');
             document.getElementById('es-btn').classList.remove('active');
             document.getElementById(lang + '-btn').classList.add('active');
@@ -310,7 +329,9 @@
             }
         }
 
-        changeLanguage('en');
+        // Load saved language preference or default to 'en'
+        const savedLanguage = localStorage.getItem('preferredLanguage') || 'en';
+        changeLanguage(savedLanguage);
     </script>
 </body>
 

@@ -254,11 +254,13 @@
 
         <!-- Navigation Menu -->
         <nav class="nav">
-            <a href="index.html">Home</a>
-            <a href="the-wedding.html">The Wedding</a>
-            <a href="about-us.html">About us</a>
-            <a href="flights-accommodation.html">Flights & Accommodation</a>
-            <a href="sevilla.html">Sevilla & Andalucía</a>
+            <a href="index.html"><span class="lang-en">Home</span><span class="lang-es">Inicio</span></a>
+            <a href="the-wedding.html"><span class="lang-en">The Wedding</span><span class="lang-es">La Boda</span></a>
+            <a href="about-us.html"><span class="lang-en">About us</span><span class="lang-es">Sobre Nosotros</span></a>
+            <a href="flights-accommodation.html"><span class="lang-en">Flights & Accommodation</span><span
+                    class="lang-es">Vuelos y Alojamiento</span></a>
+            <a href="sevilla.html"><span class="lang-en">Sevilla & Andalucía</span><span class="lang-es">Sevilla y
+                    Andalucía</span></a>
             <a href="rsvp.html" class="active">RSVP</a>
         </nav>
 
@@ -303,6 +305,9 @@
 
     <script>
         function changeLanguage(lang) {
+            // Save language preference to localStorage
+            localStorage.setItem('preferredLanguage', lang);
+
             document.getElementById('en-btn').classList.remove('active');
             document.getElementById('es-btn').classList.remove('active');
             document.getElementById(lang + '-btn').classList.add('active');
@@ -319,7 +324,9 @@
             }
         }
 
-        changeLanguage('en');
+        // Load saved language preference or default to 'en'
+        const savedLanguage = localStorage.getItem('preferredLanguage') || 'en';
+        changeLanguage(savedLanguage);
     </script>
 </body>
 

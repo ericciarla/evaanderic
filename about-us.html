@@ -212,11 +212,14 @@
 
         <!-- Navigation Menu -->
         <nav class="nav">
-            <a href="index.html">Home</a>
-            <a href="the-wedding.html">The Wedding</a>
-            <a href="about-us.html" class="active">About us</a>
-            <a href="flights-accommodation.html">Flights & Accommodation</a>
-            <a href="sevilla.html">Sevilla & Andalucía</a>
+            <a href="index.html"><span class="lang-en">Home</span><span class="lang-es">Inicio</span></a>
+            <a href="the-wedding.html"><span class="lang-en">The Wedding</span><span class="lang-es">La Boda</span></a>
+            <a href="about-us.html" class="active"><span class="lang-en">About us</span><span class="lang-es">Sobre
+                    Nosotros</span></a>
+            <a href="flights-accommodation.html"><span class="lang-en">Flights & Accommodation</span><span
+                    class="lang-es">Vuelos y Alojamiento</span></a>
+            <a href="sevilla.html"><span class="lang-en">Sevilla & Andalucía</span><span class="lang-es">Sevilla y
+                    Andalucía</span></a>
             <a href="rsvp.html">RSVP</a>
         </nav>
 
@@ -242,11 +245,11 @@
         <div class="photo-grid">
             <img src="photosOfUs/EVA-&-ERIC-18.webp" alt="Eva and Eric">
             <img src="photosOfUs/EVA-&-ERIC-70.webp" alt="Eva and Eric">
-           
+
             <img src="photosOfUs/EVA-&-ERIC-55.webp" alt="Eva and Eric">
             <img src="photosOfUs/EVA-&-ERIC-61.webp" alt="Eva and Eric">
             <img src="photosOfUs/EVA-&-ERIC-49.webp" alt="Eva and Eric">
-    
+
             <img src="photosOfUs/EVA-&-ERIC-128.webp" alt="Eva and Eric">
             <img src="photosOfUs/EVA-&-ERIC-143.webp" alt="Eva and Eric">
             <img src="photosOfUs/EVA-&-ERIC-154.webp" alt="Eva and Eric">
@@ -263,6 +266,9 @@
 
     <script>
         function changeLanguage(lang) {
+            // Save language preference to localStorage
+            localStorage.setItem('preferredLanguage', lang);
+
             document.getElementById('en-btn').classList.remove('active');
             document.getElementById('es-btn').classList.remove('active');
             document.getElementById(lang + '-btn').classList.add('active');
@@ -279,7 +285,9 @@
             }
         }
 
-        changeLanguage('en');
+        // Load saved language preference or default to 'en'
+        const savedLanguage = localStorage.getItem('preferredLanguage') || 'en';
+        changeLanguage(savedLanguage);
     </script>
 </body>
 
