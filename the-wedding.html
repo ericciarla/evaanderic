@@ -35,14 +35,28 @@
         }
 
         /* Wedding illustration */
-        .wedding-illustration {
-            margin: 40px auto 30px;
+        .events-container {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            margin: 40px auto;
+            max-width: 1000px;
+        }
+
+        .events-list {
+            flex: 1;
+        }
+
+        .venue-illustration {
+            flex: 1;
             text-align: center;
         }
 
-        .wedding-illustration img {
-            width: 300px;
+        .venue-illustration img {
+            width: 100%;
+            max-width: 450px;
             height: auto;
+            filter: invert(39%) sepia(10%) saturate(1820%) hue-rotate(332deg) brightness(95%) contrast(88%);
         }
 
         .wedding-title {
@@ -137,17 +151,6 @@
             font-size: 18px;
         }
 
-        .logo-container {
-            text-align: center;
-            margin: 40px 0;
-        }
-
-        .logo-container img {
-            max-width: 90%;
-            width: 400px;
-            height: auto;
-        }
-
         .lang-en,
         .lang-es {
             display: block;
@@ -199,8 +202,13 @@
                 font-size: 14px;
             }
 
-            .wedding-illustration img {
-                width: 200px;
+            .events-container {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .venue-illustration img {
+                max-width: 300px;
             }
         }
     </style>
@@ -213,12 +221,6 @@
     </div>
 
     <div class="content">
-        <!-- Wedding Illustration -->
-        <div class="wedding-illustration">
-            <img src="images/pRBjJK01.svg" alt="Wedding Cake"
-                style="width: 300px; height: auto; filter: invert(39%) sepia(10%) saturate(1820%) hue-rotate(332deg) brightness(95%) contrast(88%);">
-        </div>
-
         <div class="wedding-title">EVA & ERIC</div>
 
         <!-- Navigation Menu -->
@@ -237,33 +239,26 @@
         <div class="page-title lang-en">The Wedding</div>
         <div class="page-title lang-es">La Boda</div>
 
-        <div class="logo-container">
-            <img src="images/logo_bella_transp2.png" alt="Bellasombra Logo">
-        </div>
-
-        <div class="event-details">
-            <div class="event-name lang-en">Welcome Tapas</div>
-            <div class="event-name lang-es">Tapas de Bienvenida</div>
-            <div class="event-time lang-en">Friday, July 17, 2026 | Evening</div>
-            <div class="event-time lang-es">Viernes, 17 de Julio, 2026 | Noche</div>
-            <div class="event-time lang-en" style="font-size: 16px; font-style: italic;">Exact time coming soon</div>
-            <div class="event-time lang-es" style="font-size: 16px; font-style: italic;">Hora exacta próximamente</div>
-            <div class="event-location">Bar Picantón</div>
-            <div class="event-location" style="font-size: 16px; color: #8f5745; opacity: 0.9;">
-                C. Cuna, 5, Casco Antiguo, 41004 Sevilla, Spain
+        <div class="events-container">
+            <div class="events-list">
+                <div class="event-details">
+                    <div class="event-name lang-en">Ceremony & Reception</div>
+                    <div class="event-name lang-es">Ceremonia y Recepción</div>
+                    <div class="event-time lang-en">Saturday, July 18, 2026 | Evening</div>
+                    <div class="event-time lang-es">Sábado, 18 de Julio, 2026 | Noche</div>
+                    <div class="event-time lang-en" style="font-size: 16px; font-style: italic;">Exact time coming soon
+                    </div>
+                    <div class="event-time lang-es" style="font-size: 16px; font-style: italic;">Hora exacta
+                        próximamente</div>
+                    <div class="event-location">Bellasombra</div>
+                    <div class="event-location" style="font-size: 16px; color: #8f5745; opacity: 0.9;">
+                        Urb. Roalcao, 9, 41807 Espartinas, Sevilla, Spain
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <div class="event-details">
-            <div class="event-name lang-en">Ceremony & Reception</div>
-            <div class="event-name lang-es">Ceremonia y Recepción</div>
-            <div class="event-time lang-en">Saturday, July 18, 2026 | Evening</div>
-            <div class="event-time lang-es">Sábado, 18 de Julio, 2026 | Noche</div>
-            <div class="event-time lang-en" style="font-size: 16px; font-style: italic;">Exact time coming soon</div>
-            <div class="event-time lang-es" style="font-size: 16px; font-style: italic;">Hora exacta próximamente</div>
-            <div class="event-location">Bellasombra</div>
-            <div class="event-location" style="font-size: 16px; color: #8f5745; opacity: 0.9;">
-                Urb. Roalcao, 9, 41807 Espartinas, Sevilla, Spain
+            <div class="venue-illustration">
+                <img src="images/sGUrvw01.svg" alt="Bellasombra Venue">
             </div>
         </div>
 
