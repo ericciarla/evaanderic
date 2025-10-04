@@ -160,6 +160,23 @@
             line-height: 1.8;
         }
 
+        .info-section {
+            max-width: 700px;
+            margin: 50px auto;
+        }
+
+        .info-section-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #8f5745;
+        }
+
+        .info-section p {
+            margin: 15px 0;
+            line-height: 1.8;
+        }
+
         @media (max-width: 768px) {
             .content {
                 padding: 20px 15px;
@@ -227,8 +244,10 @@
         <div class="event-details">
             <div class="event-name lang-en">Welcome Dinner</div>
             <div class="event-name lang-es">Cena de Bienvenida</div>
-            <div class="event-time lang-en">Friday, July 17, 2026</div>
-            <div class="event-time lang-es">Viernes, 17 de Julio, 2026</div>
+            <div class="event-time lang-en">Friday, July 17, 2026 | Evening</div>
+            <div class="event-time lang-es">Viernes, 17 de Julio, 2026 | Noche</div>
+            <div class="event-time lang-en" style="font-size: 16px; font-style: italic;">Exact time coming soon</div>
+            <div class="event-time lang-es" style="font-size: 16px; font-style: italic;">Hora exacta próximamente</div>
             <div class="event-location">Bar Picantón</div>
             <div class="event-location" style="font-size: 16px; color: #8f5745; opacity: 0.9;">
                 C. Cuna, 5, Casco Antiguo, 41004 Sevilla, Spain
@@ -236,30 +255,16 @@
         </div>
 
         <div class="event-details">
-            <div class="event-name lang-en">Ceremony</div>
-            <div class="event-name lang-es">Ceremonia</div>
-            <div class="event-time lang-en">Saturday, July 18, 2026 | 6:00 PM</div>
-            <div class="event-time lang-es">Sábado, 18 de Julio, 2026 | 18:00</div>
-            <div class="event-location">Bellasombra Garden</div>
+            <div class="event-name lang-en">Ceremony & Reception</div>
+            <div class="event-name lang-es">Ceremonia y Recepción</div>
+            <div class="event-time lang-en">Saturday, July 18, 2026 | Evening</div>
+            <div class="event-time lang-es">Sábado, 18 de Julio, 2026 | Noche</div>
+            <div class="event-time lang-en" style="font-size: 16px; font-style: italic;">Exact time coming soon</div>
+            <div class="event-time lang-es" style="font-size: 16px; font-style: italic;">Hora exacta próximamente</div>
+            <div class="event-location">Bellasombra</div>
             <div class="event-location" style="font-size: 16px; color: #8f5745; opacity: 0.9;">
                 Urb. Roalcao, 9, 41807 Espartinas, Sevilla, Spain
             </div>
-        </div>
-
-        <div class="event-details">
-            <div class="event-name lang-en">Reception</div>
-            <div class="event-name lang-es">Recepción</div>
-            <div class="event-time lang-en">Saturday, July 18, 2026 | 7:30 PM</div>
-            <div class="event-time lang-es">Sábado, 18 de Julio, 2026 | 19:30</div>
-            <div class="event-location">Bellasombra House</div>
-            <div class="event-location" style="font-size: 16px; color: #8f5745; opacity: 0.9;">
-                Urb. Roalcao, 9, 41807 Espartinas, Sevilla, Spain
-            </div>
-        </div>
-
-        <div class="section-text">
-            <p class="lang-en">Black tie formal.<br>Outdoor ceremony, reception to follow.</p>
-            <p class="lang-es">Vestimenta formal de etiqueta.<br>Ceremonia al aire libre, seguida de recepción.</p>
         </div>
 
         <div class="section-text">
@@ -272,6 +277,44 @@
                 La ceremonia tendrá lugar en el jardín al atardecer, seguida de cena y baile bajo las estrellas.
             </p>
         </div>
+
+        <!-- Dress Code Section -->
+        <div class="info-section">
+            <div class="info-section-title"><span class="lang-en">Dress Code</span><span class="lang-es">Código de
+                    Vestimenta</span></div>
+            <div class="lang-en">
+                <p>We're asking for formal attire—think elegant full-length gowns and suits. July in Sevilla can be
+                    quite
+                    warm, so we recommend light, breathable fabrics.</p>
+                <p>All colors are welcome, including red—just please save white for the bride.</p>
+                <p>If you have any questions about what to wear, don't hesitate to reach out!</p>
+            </div>
+            <div class="lang-es">
+                <p>Pedimos vestimenta formal: vestidos largos elegantes y trajes. Julio en Sevilla puede ser bastante
+                    cálido, así que recomendamos tejidos ligeros y transpirables.</p>
+                <p>Todos los colores son bienvenidos, incluido el rojo—solo pedimos que el blanco se reserve para la
+                    novia.</p>
+                <p>Si tienes alguna pregunta sobre qué llevar, no dudes en contactarnos.</p>
+            </div>
+        </div>
+
+        <!-- Transportation Section -->
+        <div class="info-section">
+            <div class="info-section-title"><span class="lang-en">Transportation</span><span
+                    class="lang-es">Transporte</span></div>
+            <div class="lang-en">
+                <p>We highly recommend taking Uber or a taxi to Bellasombra. Both are readily available in Sevilla and
+                    typically cost around €15–30 one way from the city center.</p>
+                <p>If you prefer to drive or rent a car, please note that parking at the venue is limited.</p>
+            </div>
+            <div class="lang-es">
+                <p>Recomendamos encarecidamente tomar Uber o un taxi a Bellasombra. Ambos están fácilmente disponibles
+                    en Sevilla y normalmente cuestan alrededor de €15–30 por trayecto desde el centro de la ciudad.</p>
+                <p>Si prefieres conducir o alquilar un coche, ten en cuenta que el aparcamiento en la finca es limitado.
+                </p>
+            </div>
+        </div>
+
     </div>
 
     <script>
