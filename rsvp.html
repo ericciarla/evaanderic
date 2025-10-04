@@ -126,7 +126,7 @@
         }
 
         .rsvp-container {
-            max-width: 600px;
+            max-width: 700px;
             margin: 40px auto;
             background-color: rgba(255, 255, 255, 0.6);
             border-radius: 8px;
@@ -140,27 +140,43 @@
             margin-bottom: 30px;
         }
 
+        .important-notice {
+            background-color: rgba(143, 87, 69, 0.1);
+            border: 2px solid #8f5745;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 30px 0;
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 1.6;
+        }
+
+        .rsvp-button {
+            display: inline-block;
+            font-family: 'PT Serif', serif;
+            font-size: 20px;
+            letter-spacing: 2px;
+            color: #e8dcd0;
+            background-color: #8f5745;
+            text-decoration: none;
+            padding: 18px 50px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            box-shadow: 0 3px 10px rgba(143, 87, 69, 0.3);
+            margin: 30px 0;
+        }
+
+        .rsvp-button:hover {
+            background-color: #754739;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(143, 87, 69, 0.4);
+        }
+
         .deadline {
             font-weight: bold;
             font-size: 22px;
             margin: 20px 0;
-        }
-
-        .contact-info {
-            margin: 30px 0;
-            font-size: 18px;
-        }
-
-        .contact-info a {
-            color: #8f5745;
-            text-decoration: none;
-            border-bottom: 2px solid #8f5745;
-            padding-bottom: 2px;
-            transition: opacity 0.3s;
-        }
-
-        .contact-info a:hover {
-            opacity: 0.7;
         }
 
         .signature {
@@ -198,6 +214,16 @@
 
             .rsvp-text {
                 font-size: 18px;
+            }
+
+            .important-notice {
+                font-size: 16px;
+                padding: 15px;
+            }
+
+            .rsvp-button {
+                font-size: 16px;
+                padding: 14px 35px;
             }
 
             .deadline {
@@ -241,35 +267,32 @@
         <div class="rsvp-container">
             <div class="rsvp-text lang-en">
                 <p>We hope you can join us for our special day!</p>
-                <p>Please let us know if you'll be able to attend by responding with:</p>
-                <ul style="text-align: left; display: inline-block; margin: 20px 0;">
-                    <li>Your full name(s)</li>
-                    <li>Number of guests attending</li>
-                    <li>Any dietary restrictions or allergies</li>
-                    <li>Song requests for the reception!</li>
-                </ul>
             </div>
 
             <div class="rsvp-text lang-es">
                 <p>¡Esperamos que puedan acompañarnos en nuestro día especial!</p>
-                <p>Por favor, háganos saber si podrá asistir respondiendo con:</p>
-                <ul style="text-align: left; display: inline-block; margin: 20px 0;">
-                    <li>Su(s) nombre(s) completo(s)</li>
-                    <li>Número de invitados que asistirán</li>
-                    <li>Cualquier restricción dietética o alergia</li>
-                    <li>¡Solicitudes de canciones para la recepción!</li>
-                </ul>
             </div>
+
+            <div class="important-notice lang-en">
+                IMPORTANT: Every guest who plans on attending MUST fill out this form individually, even if you are a
+                plus one. This helps us ensure proper planning for our special day!
+            </div>
+
+            <div class="important-notice lang-es">
+                IMPORTANTE: Cada invitado que planee asistir DEBE completar este formulario individualmente, incluso si
+                es un acompañante. ¡Esto nos ayuda a garantizar una planificación adecuada para nuestro día especial!
+            </div>
+
+            <a href="https://forms.google.com/REPLACE_WITH_YOUR_FORM_ID" class="rsvp-button" target="_blank">
+                <span class="lang-en">FILL OUT RSVP FORM</span>
+                <span class="lang-es">COMPLETAR FORMULARIO RSVP</span>
+            </a>
 
             <div class="deadline lang-en">
                 Please respond by May 1, 2026
             </div>
             <div class="deadline lang-es">
                 Por favor responda antes del 1 de Mayo de 2026
-            </div>
-
-            <div class="contact-info">
-                <a href="mailto:evanderic@example.com">evanderic@example.com</a>
             </div>
 
             <div class="signature">
