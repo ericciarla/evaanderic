@@ -130,60 +130,133 @@
             font-weight: bold;
         }
 
-        .welcome-section {
+        /* Main Content Layout */
+        .main-content {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 40px;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 60px;
             max-width: 1000px;
-            margin: 40px auto;
+            margin: 60px auto;
+            text-align: left;
         }
 
-        .welcome-text {
-            font-size: 20px;
-            line-height: 1.8;
+        .left-content {
             flex: 1;
             max-width: 500px;
+        }
+
+        .date-info {
+            margin-bottom: 30px;
+        }
+
+        .date-large {
+            font-family: 'PT Serif', serif;
+            font-size: 36px;
+            font-weight: 700;
             color: #8f5745;
+            margin: 0 0 5px 0;
+            text-transform: uppercase;
         }
 
-        .welcome-image {
-            flex-shrink: 0;
-        }
-
-        .welcome-image img {
-            width: auto;
-            height: auto;
-            max-width: 350px;
-            border-radius: 8px;
-            box-shadow: 0 3px 10px rgba(143, 87, 69, 0.2);
+        .location-info {
+            font-family: 'PT Serif', serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: #8f5745;
+            margin: 0;
+            text-transform: uppercase;
+            line-height: 1.3;
         }
 
         /* RSVP Button */
-        .rsvp-button-container {
-            margin: 40px auto;
-            text-align: center;
-        }
-
         .rsvp-button {
             display: inline-block;
             font-family: 'PT Serif', serif;
-            font-size: 18px;
+            font-size: 16px;
             letter-spacing: 2px;
             color: #e8dcd0;
             background-color: #8f5745;
             text-decoration: none;
-            padding: 15px 40px;
+            padding: 12px 35px;
             border-radius: 4px;
             transition: all 0.3s ease;
             text-transform: uppercase;
             box-shadow: 0 3px 10px rgba(143, 87, 69, 0.3);
+            margin-bottom: 20px;
         }
 
         .rsvp-button:hover {
             background-color: #754739;
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(143, 87, 69, 0.4);
+        }
+
+        .rsvp-notice {
+            font-size: 16px;
+            color: #8f5745;
+            margin: 20px 0 40px 0;
+            line-height: 1.6;
+        }
+
+        .welcome-title {
+            font-family: 'PT Serif', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #8f5745;
+            margin: 40px 0 20px 0;
+            text-transform: uppercase;
+        }
+
+        .welcome-text {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #8f5745;
+            margin-bottom: 40px;
+        }
+
+        .event-details {
+            margin-top: 40px;
+        }
+
+        .event {
+            margin-bottom: 35px;
+        }
+
+        .event-icon {
+            font-size: 24px;
+            margin-right: 8px;
+        }
+
+        .event-title {
+            font-family: 'PT Serif', serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: #8f5745;
+            margin: 5px 0 10px 0;
+        }
+
+        .event-date,
+        .event-time,
+        .event-location,
+        .event-attire {
+            font-size: 17px;
+            color: #8f5745;
+            margin: 5px 0;
+            line-height: 1.6;
+        }
+
+        .right-content {
+            flex-shrink: 0;
+        }
+
+        .main-image img {
+            width: auto;
+            height: auto;
+            max-width: 400px;
+            max-height: 600px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(143, 87, 69, 0.2);
         }
 
         .lang-en,
@@ -217,12 +290,44 @@
                 font-size: 14px;
             }
 
-            .welcome-section {
+            .main-content {
                 flex-direction: column;
                 gap: 30px;
+                text-align: center;
+            }
+
+            .left-content {
+                max-width: 100%;
+            }
+
+            .date-large {
+                font-size: 28px;
+            }
+
+            .location-info {
+                font-size: 28px;
+            }
+
+            .welcome-title {
+                font-size: 20px;
             }
 
             .welcome-text {
+                font-size: 16px;
+            }
+
+            .event-title {
+                font-size: 18px;
+            }
+
+            .event-date,
+            .event-time,
+            .event-location,
+            .event-attire {
+                font-size: 15px;
+            }
+
+            .main-image img {
                 max-width: 100%;
             }
 
@@ -268,24 +373,62 @@
             <a href="rsvp.html">RSVP</a>
         </nav>
 
-        <!-- Welcome Section with Text and Image -->
-        <div class="welcome-section">
-            <div class="welcome-text">
-                <p class="lang-en">Join us in beautiful Sevilla as we celebrate our love and the beginning of our new
-                    journey together. We can't wait to share this special day with our family and friends!</p>
-                <p class="lang-es">Únanse a nosotros en la hermosa Sevilla mientras celebramos nuestro amor y el
-                    comienzo de
-                    nuestro nuevo viaje juntos. ¡Estamos ansiosos por compartir este día especial con nuestra familia y
-                    amigos!</p>
-            </div>
-            <div class="welcome-image">
-                <img src="photosOfUs/EVA-&-ERIC-236.webp" alt="Eva and Eric">
-            </div>
-        </div>
+        <!-- Main Content with Two Columns -->
+        <div class="main-content">
+            <!-- Left Column: Date, RSVP, and Details -->
+            <div class="left-content">
+                <div class="date-info">
+                    <div class="date-large lang-en">July 18, 2026</div>
+                    <div class="date-large lang-es">18 de Julio, 2026</div>
+                    <div class="location-info lang-en">Sevilla, Spain</div>
+                    <div class="location-info lang-es">Sevilla, España</div>
+                </div>
 
-        <!-- RSVP Button -->
-        <div class="rsvp-button-container">
-            <a href="rsvp.html" class="rsvp-button">RSVP</a>
+                <a href="rsvp.html" class="rsvp-button">RSVP</a>
+
+                <div class="rsvp-notice">
+                    <p class="lang-en"><strong>Please, click on RSVP to confirm your attendance</strong></p>
+                    <p class="lang-es"><strong>Por favor, haz clic en RSVP para confirmar tu asistencia</strong></p>
+                    <p class="lang-en">(latest May 1st, 2026)</p>
+                    <p class="lang-es">(antes del 1 de mayo, 2026)</p>
+                </div>
+
+                <div class="welcome-title lang-en">Welcome to our wedding website!</div>
+                <div class="welcome-title lang-es">¡Bienvenidos a nuestra web de boda!</div>
+
+                <div class="welcome-text">
+                    <p class="lang-en">We are so thrilled to celebrate this special moment in our lives with you. On
+                        July 18th, 2026, we'll say "I do" in Sevilla, at the beautiful Bellasombra.</p>
+                    <p class="lang-es">Estamos muy emocionados de celebrar este momento especial en nuestras vidas
+                        contigo. El 18 de julio de 2026, diremos "Sí, quiero" en Sevilla, en el hermoso Bellasombra.</p>
+
+                   
+                </div>
+
+                <!-- Event Details -->
+                <div class="event-details">
+                    <!-- Ceremony & Reception -->
+                    <div class="event">
+                        <div class="event-title">
+                            <span class="lang-en">Ceremony & Reception</span>
+                            <span class="lang-es">Ceremonia y Recepción</span>
+                        </div>
+                        <div class="event-date lang-en">Saturday, July 18, 2026 | Evening</div>
+                        <div class="event-date lang-es">Sábado, 18 de Julio, 2026 | Tarde/Noche</div>
+                        <div class="event-time lang-en">Exact time coming soon</div>
+                        <div class="event-time lang-es">Hora exacta próximamente</div>
+                        <div class="event-location">Bellasombra</div>
+                        <div class="event-location">Urb. Roalcao, 9, 41807 Espartinas, Sevilla, Spain</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Image -->
+            <div class="right-content">
+                <div class="main-image">
+                    <img src="photosOfUs/EVA-&-ERIC-236.webp" alt="Eva and Eric">
+                </div>
+            </div>
         </div>
     </div>
 
