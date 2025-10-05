@@ -45,6 +45,24 @@
             height: auto;
         }
 
+        .wedding-date {
+            font-family: 'PT Serif', serif;
+            font-size: 18px;
+            letter-spacing: 3px;
+            margin: 15px 0;
+            color: #8f5745;
+            text-transform: uppercase;
+        }
+
+        .countdown {
+            font-family: 'PT Serif', serif;
+            font-size: 22px;
+            letter-spacing: 2px;
+            margin: 20px 0 40px;
+            color: #8f5745;
+            text-transform: uppercase;
+        }
+
         .wedding-title {
             font-family: 'PT Serif', serif;
             font-size: 72px;
@@ -167,6 +185,18 @@
                 letter-spacing: 4px;
             }
 
+            .wedding-date {
+                font-size: 16px;
+            }
+
+            .countdown {
+                font-size: 18px;
+            }
+
+            .wedding-illustration img {
+                width: 200px;
+            }
+
             .page-title {
                 font-size: 28px;
             }
@@ -209,6 +239,9 @@
         </div>
 
         <div class="wedding-title">EVA & ERIC</div>
+        <div class="wedding-date lang-en">JULY 18, 2026 · SEVILLA, SPAIN</div>
+        <div class="wedding-date lang-es">18 DE JULIO, 2026 · SEVILLA, ESPAÑA</div>
+        <div class="countdown" id="countdown">LOADING...</div>
 
         <!-- Navigation Menu -->
         <nav class="nav">
@@ -283,11 +316,53 @@
                 enElements.forEach(el => el.style.display = 'none');
                 esElements.forEach(el => el.style.display = 'block');
             }
+
+            // Update countdown when language changes
+            if (typeof updateCountdown === 'function') {
+                updateCountdown();
+            }
         }
 
         // Load saved language preference or default to 'en'
         const savedLanguage = localStorage.getItem('preferredLanguage') || 'en';
         changeLanguage(savedLanguage);
+
+        // Countdown timer
+        function updateCountdown() {
+            const weddingDate = new Date('2026-07-18T18:00:00');
+            const now = new Date();
+            const difference = weddingDate - now;
+
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+
+            // Get current language
+            const currentLang = localStorage.getItem('preferredLanguage') || 'en';
+
+            const countdownElement = document.getElementById('countdown');
+            if (days > 0) {
+                if (currentLang === 'es') {
+                    countdownElement.textContent = `¡FALTAN ${days} DÍAS!`;
+                } else {
+                    countdownElement.textContent = `${days} DAYS TO GO!`;
+                }
+            } else if (days === 0) {
+                if (currentLang === 'es') {
+                    countdownElement.textContent = `¡HOY ES EL DÍA!`;
+                } else {
+                    countdownElement.textContent = `TODAY IS THE DAY!`;
+                }
+            } else {
+                if (currentLang === 'es') {
+                    countdownElement.textContent = `¡RECIÉN CASADOS!`;
+                } else {
+                    countdownElement.textContent = `JUST MARRIED!`;
+                }
+            }
+        }
+
+        // Update countdown on page load and when language changes
+        updateCountdown();
+        setInterval(updateCountdown, 1000 * 60 * 60); // Update every hour
     </script>
 </body>
 
